@@ -40,8 +40,6 @@ const images = [
 
 const gallery = document.querySelector(".gallery");
 
-const item = images.map(({ url, alt }) => {
-  gallery.insertAdjacentHTML("afterbegin", `<li class = "item"><img class= "img" width = '500' src ="${url}" alt="${alt}"/></li>`);
-});
+const item = images.reduce((acc, element) => (acc += `<li class = "item"><img class= "img" width = '500' src ="${element.url}" alt="${element.alt}"/></li>`), "");
 
-console.log(gallery);
+gallery.insertAdjacentHTML("afterbegin", item);
