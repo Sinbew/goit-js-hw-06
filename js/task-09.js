@@ -23,6 +23,7 @@ const button = document.querySelector(".change-color");
 const span = document.querySelector(".color");
 
 const onClickButton = button.addEventListener("click", (event) => {
-  span.textContent = getRandomHexColor();
-  body.style.backgroundColor = getRandomHexColor();
+  const color = getRandomHexColor();
+  span.textContent = color;
+  body.style.backgroundColor = color;
 });

@@ -30,6 +30,6 @@ const onFocusInput = input.addEventListener("blur", () => {
     input.classList.remove("invalid");
     return;
   }
-
+  input.classList.remove("valid");
   input.classList.add("invalid");
 });
